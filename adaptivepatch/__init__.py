@@ -1,7 +1,7 @@
 """
 adaptivepatch.py module
 """
-from patchutils import patchutils
+from .patchutils import patchutils
 from typing import Tuple, Union
 import numpy as np
 
