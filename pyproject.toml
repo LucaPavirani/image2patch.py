@@ -4,7 +4,7 @@ description = "A library that can split the image into different patches with th
 license = "MIT"
 name = "adaptivepatch"
 readme = "README.md"
-version = "0.1"
+version = "0.1.1"
 
 homepage = "https://github.com/LucaPavirani/adaptivepatch.py"
 repository = "https://github.com/LucaPavirani/adaptivepatch.py"
