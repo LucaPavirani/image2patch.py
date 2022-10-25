@@ -22,4 +22,3 @@ def adaptivepatch(image: np.ndarray, patch_size: Imsize, step = None, verbose = 
     >>> assert patches.shape == (2, 2, 2, 2)
     """
     return patchutils(image, patch_size, step, verbose)
-
