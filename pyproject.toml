@@ -1,0 +1,21 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+[project]
+name = "adaptivepatch"
+description = "A library that can automatically split an image into a number of patches that perfectly fit the image original size given the step."
+authors = [
+    {name = "Luca Pavirani", email = "luca481998@gmail.com"},
+]
+coauthors = [
+    {name = "Giorgio Allegri", email = "giorgioallegri7@gmail.com"},
+]
+readme = "README.md"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+]
+homepage = "https://github.com/LucaPavirani
+repository = "https://github.com/LucaPavirani/adaptivepatch.py"
+keywords = ["patch", "split", "augmentation", "image", "overlap"]
+requires-python = ">=3.5"
+dynamic = ["version", "description"]
