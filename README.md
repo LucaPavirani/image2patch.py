@@ -11,3 +11,6 @@ pip install adaptivepatch
 ## How to use it
 `adaptivepatch(image, patch_size, step=None, verbose)`
 
+## Licence
+MIT Licence
+

@@ -19,6 +19,8 @@ requires-python = ">=3.5"
 
 dynamic = ["version", "description"]
 
+[project.scripts]
+adaptivepatch = "adaptivepatch.adaptivepatch:adaptivepatch"
 [project.urls]
 Documentation = "https://github.com/LucaPavirani/adaptivepatch.py"
 Source = "https://github.com/LucaPavirani/adaptivepatch.py"
