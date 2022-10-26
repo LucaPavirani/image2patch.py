@@ -21,23 +21,26 @@ def findstep(image, patch_size, verbose):
     
     X = image.shape[0]
     Y = image.shape[1]
+    arr_shape = np.array(image.shape)
+    patch_size = np.array(patch_size, dtype=arr_shape.dtype)
+    patch_size_x = patch_size[0]
+    patch_size_y = patch_size[1]
+    N_patches_x = X//patch_size_x
+    N_patches_y = Y//patch_size_y
 
-    N_patches_x = X//patch_size
-    N_patches_y = Y//patch_size
-
-    diff_x = X - patch_size*N_patches_x
-    diff_y = Y - patch_size*N_patches_y
+    diff_x = X - patch_size_x*N_patches_x
+    diff_y = Y - patch_size_y*N_patches_y
     
-    overlap_x = math.ceil((patch_size - diff_x) / N_patches_x) #first overlap, rounded high so if it's 8.3 returns 9
-    overlap_y = math.ceil((patch_size - diff_y) / N_patches_y)
+    overlap_x = math.ceil((patch_size_x - diff_x) / N_patches_x) #first overlap, rounded high so if it's 8.3 returns 9
+    overlap_y = math.ceil((patch_size_y - diff_y) / N_patches_y)
     overlapping_pixels_x_axis = overlap_x * Y
     overlapping_pixels_y_axis = overlap_y * X
 
-    step_x = patch_size - overlap_x
-    step_y = patch_size - overlap_y
+    step_x = patch_size_x - overlap_x
+    step_y = patch_size_y - overlap_y
     
-    lost_pixel_x = (X - (patch_size*(N_patches_x+1)- (overlap_x*N_patches_x)))
-    lost_pixel_y = (Y - (patch_size*(N_patches_y+1)- (overlap_y*N_patches_y))) 
+    lost_pixel_x = (X - (patch_size_x*(N_patches_x+1)- (overlap_x*N_patches_x)))
+    lost_pixel_y = (Y - (patch_size_y*(N_patches_y+1)- (overlap_y*N_patches_y))) 
 
     if verbose == True:
         print('Number of patches obtained in the x direction =', N_patches_x+1)
