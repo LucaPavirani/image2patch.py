@@ -6,7 +6,7 @@ from typing import Tuple, Union
 import numpy as np
 
 Imsize = Union[Tuple[int, int], Tuple[int, int, int]]
-def adaptivepatch(image: np.ndarray, patch_size: Imsize, step = None, verbose = False)-> np.ndarray: 
+def image2patch(image: np.ndarray, patch_size: Imsize, step = None, verbose = False)-> np.ndarray: 
     """
     Divide a 2D or 3D image into smaller patches in order to do not exclude relevant pixels. The function finds the best way to split the image with overlapping.
     Parameters

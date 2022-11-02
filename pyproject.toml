@@ -1,13 +1,13 @@
 [tool.poetry]
 authors = ["Luca Pavirani <luca481998@gmail.com>", "Giorgio Allegri <giorgioallegri7@gmail.com>"]
-description = "A library that can split the image into different patches with the optimal step in order to avoid pixel loss."
+description = "A library that can split the image into different patches with the optimal step in order to avoid pixels loss and then it can merge them back together."
 license = "MIT"
-name = "adaptivepatch"
+name = "image2patch"
 readme = "README.md"
-version = "0.0.1"
+version = "0.0.2"
 
-homepage = "https://github.com/LucaPavirani/adaptivepatch.py"
-repository = "https://github.com/LucaPavirani/adaptivepatch.py"
+homepage = "https://github.com/LucaPavirani/image2patch.py"
+repository = "https://github.com/LucaPavirani/image2patch.py"
 
 classifiers = [
   "Intended Audience :: Developers",
@@ -16,8 +16,8 @@ classifiers = [
 
 keywords = ["patch", "split", "augmentation", "image", "overlap"]
 packages = [
-    { include = "adaptivepatch" },
-    { include = "adaptivepatch/**/*.py" },
+    { include = "image2patch" },
+    { include = "image2patch/**/*.py" },
 ]
 [tool.poetry.dependencies]
 numpy = "^1"
