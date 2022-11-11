@@ -1,6 +1,6 @@
 [tool.poetry]
 authors = ["Luca Pavirani <luca481998@gmail.com>", "Giorgio Allegri <giorgioallegri7@gmail.com>"]
-description = "A library that can split the image into different patches with the optimal step in order to avoid pixels loss and then it can merge them back together."
+description = "A library that splits the image into overlapping or non-overlapping patches with the optimal step in order to minimize pixels loss. It can then merge them back together."
 license = "MIT"
 name = "image2patch"
 readme = "README.md"

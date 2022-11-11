@@ -16,11 +16,11 @@ import math
 
 def findstep(image, patch_size, step, verbose):
     '''
-    Takes the shape of the image and find the minimum overlap in order to obtain the best number of patches without excluding any pixel. 
+    Takes the shape of the image and find the minimum overlap in order to obtain the best number of patches excluding the least number of pixels. 
     '''
     
-    X = image.shape[1]
-    Y = image.shape[0]
+    X = image.shape[0] 
+    Y = image.shape[1]
     patch_size_x, patch_size_y = patch_size 
     
     # Number of patches: this number is lower except if the size is a multiple of the patch size
@@ -64,10 +64,10 @@ def findstep(image, patch_size, step, verbose):
         lost_pixel_y = (Y - (patch_size_y*(N_patches_y) - overlapY))
         lost_pixel_x = (X - (patch_size_x*(N_patches_x) - overlapX))
         
-        print('Number of patches obtained:', N_patches_x,',',N_patches_y)
-        print('Step', step_x, ',', step_y)
-        print(f"Overlapping pixels in y = {overlapY}/{Y}, x = {overlapX}/{X}")
-        print(f"Lost pixels in y = {lost_pixel_y}/{Y}, x = {lost_pixel_x}/{X}")
+        print('Number of patches obtained: ', N_patches_x,', ',N_patches_y)
+        print('Step along y axis:', step_x, ', x axis:', step_y)
+        print(f"Overlapping pixels in y: {overlapX}/{X}, x: {overlapY}/{Y}")
+        print(f"Lost pixels in y axis: {lost_pixel_x}/{X}, x axis: {lost_pixel_y}/{Y}")
             
     return step_x, step_y
 
@@ -85,7 +85,6 @@ def patchutils(img, patch_size, step, verbose):
         patch_size = (patch_size,) * num_dim
     if not (len(patch_size) == num_dim):
         raise ValueError("`patch_size` is incompatible with `img.shape`")
-
 
     step_x_axis, step_y_axis = findstep(img, patch_size, step, verbose)
     step = (step_y_axis, step_x_axis)
