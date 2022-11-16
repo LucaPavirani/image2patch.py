@@ -71,7 +71,7 @@ def _patch2image(patched_image: np.ndarray, original_dims: Tuple[int, int], step
     stepX, stepY = step
     reconstructed_image = np.empty((stepY*(NpatchesY-1)+patchY, stepX*(NpatchesX-1)+patchX))
 
-    px_0, py_0= 0
+    px_0, py_0= 0, 0
 
     for i_y in range(NpatchesY-1):
         for i_x in range(NpatchesX-1):
@@ -80,8 +80,7 @@ def _patch2image(patched_image: np.ndarray, original_dims: Tuple[int, int], step
         px_0 = 0
         py_0 = stepY+(i_y*stepY)
 
-    fpy_0 = 0
-    fpx_0 = 0
+    fpy_0, fpx_0 = 0, 0
 
     # Reconstruction of the last column
     for fi_y in range(NpatchesY-1):
