@@ -36,9 +36,6 @@ In particular:
 - resize_flag : allows to resize the image to its original dimension in case of pixels loss. 
 
  Citing
-~~~~~~~~
-
-.. code::
 
     @misc{image2patch2022,
       Author = {Allegri, Giorgio and Pavirani, Luca},
