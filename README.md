@@ -35,6 +35,19 @@ In particular:
 - step : step obtained from `image2patch`
 - resize_flag : allows to resize the image to its original dimension in case of pixels loss. 
 
+ Citing
+~~~~~~~~
+
+.. code::
+
+    @misc{image2patch2022,
+      Author = {Allegri, Giorgio and Pavirani, Luca},
+      Title = {image2patch},
+      Year = {2022},
+      Publisher = {GitHub},
+      Journal = {GitHub repository},
+      Howpublished = {\url{https://github.com/LucaPavirani/image2patch.py}}
+    }
  
 ## Licence
 [MIT](https://choosealicense.com/licenses/mit/)
